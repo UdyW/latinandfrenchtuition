@@ -1,0 +1,59 @@
+@extends('layouts.template', ['class' => '', 'activePage' => 'home', 'title' => __('Niovi\'s Dashboard')])
+
+@section('content')
+    <section class="welcome">
+        <div class="container">
+            <h2>Welcome!</h2>
+                {!! $welcome_text !!}
+            <img  style="margin-top: 17px;" src="assets/images/sinature.jpg">
+            <p style="margin-top: 20px;"><strong>Niovi Gkioka.<br>BA,MA, QTS</strong></p>
+
+        </div>
+    </section>
+    <section class="services">
+        <div class="container">
+            <h2>Services</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="assets/images/service1.png">
+                    <h3>One - to - One tuition</h3>
+                    <p>I offer the highest quality tuition in Latin and French. I am a specialist and fully qualified teacher for CE 13+ GCSE, IGCSE, A-Level /IB and undergraduate Level.</p>
+                    <p> I also have thorough knowledge of different curricula and exam boards (OCR, AQA, CAMBRIDGE, etc).</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="assets/images/service2.png">
+                    <h3>Exam Preparation</h3>
+                    <p>I have years of expertise in preparing students intensively for school entrance, scholarship, GCSE, IGCSE and A-Level exams.</p>
+                    <p>Throughout my career I have obtained excellent knowledge of the entry requirements of top independent schools.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="assets/images/service3.png">
+                    <h3>Personalised learning</h3>
+                    <p>My tailor-made tutoring programme is designed to suit your learning needs and goals.</p>
+                    <p>With personalised assignments, assessments and additional materials, I have the tools you need to improve exam technique and maximise success.</p>
+                </div>
+            </div>
+            <a href="#" class="btn orange">Learn More</a>
+        </div>
+    </section>
+    <section class="testimonials">
+        <div class="container">
+            <h2>Testimonials</h2>
+            <div class="row">
+            <p>Niovi has been instrumental in my sons progress in French and Latin at common
+                entrance resulting in him being admitted to one of UK's leading independent
+                schools. She has also tutored him Greek. Niovi's commitment, dedication and
+
+                passion is second to non and could not be more highly recommended.</p>
+            </div>
+            <a href="#" class="btn orange">More Testimonials</a>
+        </div>
+    </section>
+    <section class="about">
+        <div class="container">
+            <h2>How does online tutoring work?</h2>
+            <iframe width="60%" height="450" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+        </div>
+    </section>
+@endsection
