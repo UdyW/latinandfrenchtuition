@@ -37,24 +37,24 @@
                             <span class="sidebar-normal">{{ __('Home') }} </span>
                         </a>
                     </li>
-                    <li class="nav-item{{ $activePage == 'about' ? ' active' : '' }}">
-                        <a class="nav-link" href="{{ route('user.index') }}">
-                            <span class="sidebar-mini"> A </span>
-                            <span class="sidebar-normal"> {{ __('About') }} </span>
-                        </a>
-                    </li>
-                    <li class="nav-item{{ $activePage == 'services' ? ' active' : '' }}">
-                        <a class="nav-link" href="{{ route('user.index') }}">
-                            <span class="sidebar-mini"> S </span>
-                            <span class="sidebar-normal"> {{ __('Services') }} </span>
-                        </a>
-                    </li>
-                    <li class="nav-item{{ $activePage == 'contact' ? ' active' : '' }}">
-                        <a class="nav-link" href="{{ route('user.index') }}">
-                            <span class="sidebar-mini"> C </span>
-                            <span class="sidebar-normal"> {{ __('Contact') }} </span>
-                        </a>
-                    </li>
+                    {{--<li class="nav-item{{ $activePage == 'about' ? ' active' : '' }}">--}}
+                        {{--<a class="nav-link" href="{{ route('user.index') }}">--}}
+                            {{--<span class="sidebar-mini"> A </span>--}}
+                            {{--<span class="sidebar-normal"> {{ __('About') }} </span>--}}
+                        {{--</a>--}}
+                    {{--</li>--}}
+                    {{--<li class="nav-item{{ $activePage == 'services' ? ' active' : '' }}">--}}
+                        {{--<a class="nav-link" href="{{ route('user.index') }}">--}}
+                            {{--<span class="sidebar-mini"> S </span>--}}
+                            {{--<span class="sidebar-normal"> {{ __('Services') }} </span>--}}
+                        {{--</a>--}}
+                    {{--</li>--}}
+                    {{--<li class="nav-item{{ $activePage == 'contact' ? ' active' : '' }}">--}}
+                        {{--<a class="nav-link" href="{{ route('user.index') }}">--}}
+                            {{--<span class="sidebar-mini"> C </span>--}}
+                            {{--<span class="sidebar-normal"> {{ __('Contact') }} </span>--}}
+                        {{--</a>--}}
+                    {{--</li>--}}
                     <li class="nav-item{{ $activePage == 'cms.banners' ? ' active' : '' }}">
                         <a class="nav-link" href="{{ route('cms.banners') }}">
                             <span class="sidebar-mini"> B </span>
