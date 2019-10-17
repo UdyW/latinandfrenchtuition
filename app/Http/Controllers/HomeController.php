@@ -6,8 +6,10 @@ use App\Banners;
 use App\DocumentCategory;
 use App\DocumentSubCategory;
 use App\Document;
+use App\leads;
 use Illuminate\Http\Request;
 use App\HomePage;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
 use App\Pricing;
@@ -188,5 +190,17 @@ class HomeController extends Controller
             ]);
         }
         return Redirect::route('cms.pricing');
+    }
+
+    public function leads(){
+        return view('cms.leads')->with('leads', leads::all());
+    }
+
+    public function leadsContact($id){
+            DB::table('leads')
+                ->where('id' , $id)
+                ->update(['contacted'=>1]);
+
+        return redirect('leads');
     }
 }

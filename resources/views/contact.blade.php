@@ -61,26 +61,35 @@
     <section class="contact-form">
         <div class="container">
             <h2>Please use the tuition request form or the direct contact details below</h2>
-            <form>
+            @if(isset($message))
+                {{$message}}
+            @else
+            <form method="POST" action="/savelead">
+                @csrf
                 <div class="row">
                     <div class="col-md-6">
-                        <input class="form-control" type="text" name="" placeholder="First Name">
+                        <input class="form-control" type="text" name="firstname" placeholder="First Name">
                     </div>
                     <div class="col-md-6">
-                        <input class="form-control" type="text" name="" placeholder="Last Name">
+                        <input class="form-control" type="text" name="lastname" placeholder="Last Name">
                     </div>
                     <div class="col-md-6">
-                        <input class="form-control" type="text" name="" placeholder="Phone Number">
+                        <input class="form-control" type="text" name="phone" placeholder="Phone Number">
                     </div>
                     <div class="col-md-6">
-                        <input class="form-control" type="text" name="" placeholder="Email Address">
+                        <input class="form-control" type="text" name="email" placeholder="Email Address">
                     </div>
                     <div class="col-md-12">
-                        <textarea class="form-control" type="text" name="" placeholder="Tuition Requirement"></textarea>
+                        <textarea class="form-control" type="text" name="requirement" placeholder="Tuition Requirement"></textarea>
                     </div>
                 </div>
-                <a href="#" class="btn orange">Submit</a>
+                @error('title')
+                <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
+                <input type="submit" class="btn orange" value="Submit">
+                {{--<a href="#" class="btn orange">Submit</a>--}}
             </form>
+            @endif
         </div>
     </section>
 

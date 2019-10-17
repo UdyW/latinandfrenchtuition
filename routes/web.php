@@ -26,6 +26,8 @@ Route::get('about', function(){ return view('about');})->name('about');
 
 Route::get('services', function(){ return view('services');})->name('services');
 
+Route::post('savelead', 'ContactController@save')->name('savelead');
+
 Route::get('/blog', 'BlogController@index');
 Route::get('/posts/{post}', 'BlogController@post');
 Route::post('/posts/{post}/comment', 'BlogController@comment');
@@ -69,6 +71,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('/admin/categories', 'CategoryController', ['except' => ['show']]);
     Route::resource('/admin/tags', 'TagController', ['except' => ['show']]);
     Route::resource('/admin/comments', 'CommentController', ['only' => ['index', 'destroy']]);
+
+    Route::get('leads', 'HomeController@leads')->name('leads');
+    Route::get('/leads/contact/{id}', 'HomeController@leadsContact');
 
 	Route::get('table-list', function () {
 		return view('pages.table_list');

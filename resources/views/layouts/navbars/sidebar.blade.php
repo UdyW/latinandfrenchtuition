@@ -172,6 +172,12 @@
           </ul>
         </div>
       </li>
+        <li class="nav-item{{ $activePage == 'leads' ? ' active' : '' }}">
+            <a class="nav-link" href="{{ route('leads') }}">
+            <i class="material-icons">contact_mail</i>
+            <p>{{ __('Leads') }}</p>
+            </a>
+        </li>
       {{--<li class="nav-item{{ $activePage == 'table' ? ' active' : '' }}">--}}
         {{--<a class="nav-link" href="{{ route('table') }}">--}}
           {{--<i class="material-icons">content_paste</i>--}}
