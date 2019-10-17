@@ -3,7 +3,7 @@
         <div class="row align-items-center">
             <div class="col-md-5">
                 <a class="footer-logo" href="index.html" style=" display: inline-flex; ">
-                    <span class="text-orange">Latin & French
+                    <span class="text-orange">Latin & French Tuition
                 </a>
             </div>
             <div class="col-md">
@@ -12,7 +12,7 @@
             </div>
             <div class="col-md">
                 <h3>Email:</h3>
-                <p>niovigka@gmail.com</p>
+                <p>info@latinandfrenchtuition.com</p>
             </div>
             <div class="col-md">
                 <div class="social-icon">
