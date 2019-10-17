@@ -48,7 +48,7 @@
                                         <div class="form-group">
                                             <select class="form-control" name="subcategory" id="input-category" required="true" aria-required="true">
                                                 @foreach($subcategories as $c)
-                                                    <option value="{{$c->id}}" @if($doc != null && $c->id == $doc->documentSubCategory->id) {{'selected'}}@endif>{{$c->name}}</option>
+                                                    <option value="{{$c->id}}" @if($doc != null && $c->id == $doc->documentSubCategory->id) {{'selected'}}@endif>{{$c->documentCategory->name}} -> {{$c->name}}</option>
                                                 @endforeach
                                             </select>
                                         </div>
