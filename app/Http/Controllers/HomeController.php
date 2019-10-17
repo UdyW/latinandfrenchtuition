@@ -149,8 +149,8 @@ class HomeController extends Controller
     }
 
     public function saveBanners(Request $request){
-
-        $bannerimage = $request->file('banner')->store('public/banners');
+        if($request->file('banner') == null) $bannerimage = "";
+        else $bannerimage = $request->file('banner')->store('public/banners');
         $banner = Banners::where('id', $request->page)->first();
         $banner->update(['image'=>$bannerimage]);
         return Redirect::route('cms.banners');
