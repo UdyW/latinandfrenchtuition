@@ -3,50 +3,50 @@
 @section('content')
     <div class="py-5">
         <div class="container">
-            <h2 class="pb-5 text-center">Pricing</h2>
-            <div class="table-responsive">
-                <table class="table table-bordered">
-                    <thead>
-                    <tr>
-                        <th width="30%" scope="col"></th>
-                        <th width="20%" scope="col">School entrance exams</th>
-                        <th width="15%" scope="col">GCSE</th>
-                        <th width="15%" scope="col">A-level</th>
-                        <th width="20%" scope="col">Undergraduates</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <th scope="row">Latin</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">French</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Ancient Greek</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Classical Civilisation</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
+            {{--<h2 class="pb-5 text-center">Pricing</h2>--}}
+            {{--<div class="table-responsive">--}}
+                {{--<table class="table table-bordered">--}}
+                    {{--<thead>--}}
+                    {{--<tr>--}}
+                        {{--<th width="30%" scope="col"></th>--}}
+                        {{--<th width="20%" scope="col">School entrance exams</th>--}}
+                        {{--<th width="15%" scope="col">GCSE</th>--}}
+                        {{--<th width="15%" scope="col">A-level</th>--}}
+                        {{--<th width="20%" scope="col">Undergraduates</th>--}}
+                    {{--</tr>--}}
+                    {{--</thead>--}}
+                    {{--<tbody>--}}
+                    {{--<tr>--}}
+                        {{--<th scope="row">Latin</th>--}}
+                        {{--<td></td>--}}
+                        {{--<td></td>--}}
+                        {{--<td></td>--}}
+                        {{--<td></td>--}}
+                    {{--</tr>--}}
+                    {{--<tr>--}}
+                        {{--<th scope="row">French</th>--}}
+                        {{--<td></td>--}}
+                        {{--<td></td>--}}
+                        {{--<td></td>--}}
+                        {{--<td></td>--}}
+                    {{--</tr>--}}
+                    {{--<tr>--}}
+                        {{--<th scope="row">Ancient Greek</th>--}}
+                        {{--<td></td>--}}
+                        {{--<td></td>--}}
+                        {{--<td></td>--}}
+                        {{--<td></td>--}}
+                    {{--</tr>--}}
+                    {{--<tr>--}}
+                        {{--<th scope="row">Classical Civilisation</th>--}}
+                        {{--<td></td>--}}
+                        {{--<td></td>--}}
+                        {{--<td></td>--}}
+                        {{--<td></td>--}}
+                    {{--</tr>--}}
+                    {{--</tbody>--}}
+                {{--</table>--}}
+            {{--</div>--}}
         </div>
     </div>
 
@@ -103,7 +103,7 @@
                                 <i class="fas fa-envelope"></i>
                             </span>
                         <p><strong>Email me</strong></p>
-                        <p>niovigka@gmail.com</p>
+                        <p>info@latinandfrenchtuition.com</p>
                     </div>
                 </div>
             </div>
