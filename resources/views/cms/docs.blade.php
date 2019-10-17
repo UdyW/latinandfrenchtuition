@@ -135,7 +135,7 @@
                                                 {{ $d->name }}
                                             </td>
                                             <td>
-                                                {{ $d->documentSubCategory->name }}
+                                                {{$d->documentSubCategory->documentCategory->name}} -> {{ $d->documentSubCategory->name }}
                                             </td>
                                             <td class="text-center">
                                                 {{ $d->available }}
