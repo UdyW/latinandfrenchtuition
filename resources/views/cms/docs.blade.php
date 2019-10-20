@@ -147,15 +147,15 @@
                                                 {{ $d->created_at->format('Y-m-d') }}
                                             </td>
                                             <td class="td-actions text-right">
-                                                <form action="{{ route('doc.subcategory.delete', $doc) }}" method="post">
-                                                    @csrf
-                                                    @method('delete')
+                                                <form action="{{ route('docs.delete', $d) }}" method="post">
 
+                                                    @method('delete')
+                                                    @csrf
                                                     {{--<a rel="tooltip" class="btn btn-success btn-link" href="{{ route('user.edit', $cat->id) }}" data-original-title="" title="">--}}
                                                     {{--<i class="material-icons">edit</i>--}}
                                                     {{--<div class="ripple-container"></div>--}}
                                                     {{--</a>--}}
-                                                    <button type="button" class="btn btn-danger btn-link" data-original-title="" title="" onclick="confirm('{{ __("Are you sure you want to delete this sub category?") }}') ? this.parentElement.submit() : ''">
+                                                    <button type="button" class="btn btn-danger btn-link" data-original-title="" title="" onclick="confirm('{{ __("Are you sure you want to delete this document?") }}') ? this.parentElement.submit() : ''">
                                                         <i class="material-icons">close</i>
                                                         <div class="ripple-container"></div>
                                                     </button>

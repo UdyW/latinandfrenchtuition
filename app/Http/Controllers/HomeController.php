@@ -139,8 +139,9 @@ class HomeController extends Controller
         return Redirect::route('docs');
     }
 
-    public function deleteDocument($id){
-
+    public function deleteDocument($doc){
+        Document::findOrFail($doc)->delete();
+        return Redirect::route('docs');
     }
 
     public function showBanners()
