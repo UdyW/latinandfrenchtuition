@@ -118,7 +118,7 @@
                 events : [
                         @foreach($appointments as $appointment)
                     {
-                        title : '{{$appointment->client_name }}',
+                        title : '{{$appointment->comments }}',
                         start : '{{$appointment->start_datetime }}',
                         @if ($appointment->finish_datetime)
                                 end: '{{$appointment->finish_datetime }}',
