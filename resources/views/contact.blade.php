@@ -1,58 +1,10 @@
 @extends('layouts.template', ['class' => '', 'activePage' => 'contact', 'title' => __('Niovi\'s Dashboard')])
 
 @section('content')
-    <div class="py-5">
-        <div class="container">
-            {{--<h2 class="pb-5 text-center">Pricing</h2>--}}
-            {{--<div class="table-responsive">--}}
-                {{--<table class="table table-bordered">--}}
-                    {{--<thead>--}}
-                    {{--<tr>--}}
-                        {{--<th width="30%" scope="col"></th>--}}
-                        {{--<th width="20%" scope="col">School entrance exams</th>--}}
-                        {{--<th width="15%" scope="col">GCSE</th>--}}
-                        {{--<th width="15%" scope="col">A-level</th>--}}
-                        {{--<th width="20%" scope="col">Undergraduates</th>--}}
-                    {{--</tr>--}}
-                    {{--</thead>--}}
-                    {{--<tbody>--}}
-                    {{--<tr>--}}
-                        {{--<th scope="row">Latin</th>--}}
-                        {{--<td></td>--}}
-                        {{--<td></td>--}}
-                        {{--<td></td>--}}
-                        {{--<td></td>--}}
-                    {{--</tr>--}}
-                    {{--<tr>--}}
-                        {{--<th scope="row">French</th>--}}
-                        {{--<td></td>--}}
-                        {{--<td></td>--}}
-                        {{--<td></td>--}}
-                        {{--<td></td>--}}
-                    {{--</tr>--}}
-                    {{--<tr>--}}
-                        {{--<th scope="row">Ancient Greek</th>--}}
-                        {{--<td></td>--}}
-                        {{--<td></td>--}}
-                        {{--<td></td>--}}
-                        {{--<td></td>--}}
-                    {{--</tr>--}}
-                    {{--<tr>--}}
-                        {{--<th scope="row">Classical Civilisation</th>--}}
-                        {{--<td></td>--}}
-                        {{--<td></td>--}}
-                        {{--<td></td>--}}
-                        {{--<td></td>--}}
-                    {{--</tr>--}}
-                    {{--</tbody>--}}
-                {{--</table>--}}
-            {{--</div>--}}
-        </div>
-    </div>
-
     <div class="py-5 text-center">
         <div class="container">
             <h2 class="pb-4">Availability</h2>
+            <div id='calendar'></div>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
             <p>Please contact me.</p>
         </div>
@@ -198,4 +150,48 @@
             </div>
         </div>
     </section>
+@endsection
+
+@section('javascript')
+    <script>
+        @can('appointment_delete')
+            window.route_mass_crud_entries_destroy = '{{ route('appointments.mass_destroy') }}';
+        @endcan
+
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            // page is now ready, initialize the calendar...
+            $('#calendar').fullCalendar({
+                // put your options and callbacks here
+                defaultView: 'agendaWeek',
+                events : [
+                        @foreach($appointments as $appointment)
+                    {
+                        title : 'Reserved',
+                        start : '{{$appointment->start_datetime }}',
+                        @if ($appointment->finish_datetime)
+                        end: '{{$appointment->finish_datetime }}',
+                        @endif
+                    },
+                    @endforeach
+                ],
+                // businessHours: {
+                //     // days of week. an array of zero-based day of week integers (0=Sunday)
+                //     daysOfWeek: [ 1, 2, 3, 4 ], // Monday - Thursday
+                //
+                //     startTime: '08:00', // a start time (10am in this example)
+                //     endTime: '18:00', // an end time (6pm in this example)
+                // },
+                minTime: '08:00:00',
+                nowIndicator: true,
+                height: 500,
+                slotDuration: '01:00:00',
+                allDaySlot: false,
+                eventColor: '#ed7b1d',
+                eventTextColor: 'white'
+            })
+        });
+    </script>
 @endsection
