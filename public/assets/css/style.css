@@ -349,6 +349,10 @@ footer .social-icon a {
     font-size: 15px;
 }
 
+.last-subcategory{
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+}
 .doc-list{
     /*background: #495057;*/
     color: #fff;

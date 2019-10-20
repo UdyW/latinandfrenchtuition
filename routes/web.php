@@ -16,7 +16,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 
-Route::get('contact', function(){ return view('contact');})->name('contact');
+Route::get('contact', 'FrontEndController@contact')->name('contact');
 
 Route::get('resources', function(){ return view('documents');})->name('resources');
 

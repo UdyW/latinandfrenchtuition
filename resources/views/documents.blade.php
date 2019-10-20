@@ -20,7 +20,7 @@
                         </div>
                         @foreach(\App\DocumentSubCategory::where('category_id',$cat->id)->get() as $subcat)
                             <?php $i++ ?>
-                            <div class="card-header @if($i%2 == 0)light-gray @else dark-gray @endif" id="heading{{$i}}">
+                            <div class="card-header @if($i%2 == 0)light-gray @else dark-gray @endif  @if($loop->last) last-subcategory @endif" id="heading{{$i}}">
                                 <h5 class="mb-0">
                                     <button class="btn btn-link white-text collapsed" data-toggle="collapse" data-target="#collapse{{$i}}" aria-expanded="false">
                                         <span>{{$subcat->name}}</span>
