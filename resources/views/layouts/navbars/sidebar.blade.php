@@ -178,6 +178,12 @@
             <p>{{ __('Leads') }}</p>
             </a>
         </li>
+        <li class="nav-item{{ $activePage == 'appointments' ? ' active' : '' }}">
+            <a class="nav-link" href="{{ route('appointments.index') }}">
+            <i class="material-icons">calendar_today</i>
+            <p>{{ __('Appointments') }}</p>
+            </a>
+        </li>
       {{--<li class="nav-item{{ $activePage == 'table' ? ' active' : '' }}">--}}
         {{--<a class="nav-link" href="{{ route('table') }}">--}}
           {{--<i class="material-icons">content_paste</i>--}}

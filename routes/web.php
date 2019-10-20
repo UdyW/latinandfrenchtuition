@@ -32,6 +32,11 @@ Route::get('/blog', 'BlogController@index');
 Route::get('/posts/{post}', 'BlogController@post');
 Route::post('/posts/{post}/comment', 'BlogController@comment');
 
+Route::get('calender', 'CalenderController@show');
+Route::resource('appointments', 'AppointmentsController');
+
+//Route::get('showcalender', 'AppointmentsController@index')->name('showcalender');
+
 Route::group(['middleware' => 'auth'], function () {
 
     Route::get('cms.pricing/{id?}', 'HomeController@showPricing')->name('cms.pricing');
@@ -62,7 +67,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::post('docs.save', 'HomeController@saveDocument')->name('docs.save');
 
-    Route::get('docs.destroy/{id?}', 'HomeController@deleteDocument')->name('docs.delete');
+    Route::delete('docs.destroy/{id?}', 'HomeController@deleteDocument')->name('docs.delete');
 
     Route::post('cms.home.welcome-message', 'HomeController@updatehomeContent')->name('cms.home.welcome-message');
 
@@ -74,6 +79,8 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('leads', 'HomeController@leads')->name('leads');
     Route::get('/leads/contact/{id}', 'HomeController@leadsContact');
+
+    Route::resource('/appointments', 'AppointmentsController');
 
 	Route::get('table-list', function () {
 		return view('pages.table_list');
