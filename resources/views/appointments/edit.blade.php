@@ -17,6 +17,19 @@
 
                             <div class="card-body">
                                 <div class="row">
+                                    <label class="col-sm-2 col-form-label">{{ __('All day') }}</label>
+                                    <div class="col-sm-7">
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" value="1" name="all_day" @if($appointment != null && $appointment->all_day == 1) {{'checked'}} @endif>
+                                                <span class="form-check-sign">
+                                                  <span class="check"></span>
+                                              </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
                                     <div class="col-xs-12 form-group">
                                         {!! Form::label('start_datetime', 'Start time*', ['class' => 'control-label']) !!}
                                         {!! Form::text('start_datetime', old('start_datetime'), ['class' => 'form-control datetime', 'placeholder' => '', 'required' => '']) !!}

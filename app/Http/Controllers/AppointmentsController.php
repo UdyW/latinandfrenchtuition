@@ -54,6 +54,7 @@ class AppointmentsController extends Controller
 		$appointment->start_datetime = "".$request->date." ".$request->starting_hour .":".$request->starting_minute.":00";
 		$appointment->finish_datetime = "".$request->date." ".$request->finish_hour .":".$request->finish_minute.":00";
 		$appointment->comments = $request->comments;
+		$appointment->all_day = ($request->all_day == null?0:1);
 		$appointment->save();
 
 

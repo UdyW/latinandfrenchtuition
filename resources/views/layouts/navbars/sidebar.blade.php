@@ -184,6 +184,12 @@
             <p>{{ __('Appointments') }}</p>
             </a>
         </li>
+        <li class="nav-item{{ $activePage == 'faqs' ? ' active' : '' }}">
+            <a class="nav-link" href="{{ route('faqs.index') }}">
+                <i class="material-icons">question_answer</i>
+                <p>{{ __('FAQs') }}</p>
+            </a>
+        </li>
       {{--<li class="nav-item{{ $activePage == 'table' ? ' active' : '' }}">--}}
         {{--<a class="nav-link" href="{{ route('table') }}">--}}
           {{--<i class="material-icons">content_paste</i>--}}

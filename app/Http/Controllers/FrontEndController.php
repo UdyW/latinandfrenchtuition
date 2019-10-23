@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Faqs;
 use App\HomePage;
 use App\Appointment;
 
@@ -16,7 +17,7 @@ class FrontEndController extends Controller
 
     public function contact(){
         $appointments = Appointment::all();
-
-        return view('contact', compact('appointments'));
+        $faqs = Faqs::all();
+        return view('contact', compact('appointments','faqs'));
     }
 }

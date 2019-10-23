@@ -14,21 +14,37 @@
                             </div>
                             <div class="card-body ">
                             <div class="row">
-                                <div class="col-xs-12 form-group">
-                                    {!! Form::label('date', 'Date*', ['class' => 'control-label']) !!}
+                                    <label class="col-sm-2 col-form-label">{{ __('Date') }}</label>
 {{--                                    {!! Form::text('date', old('date'), ['class' => 'form-control date', 'placeholder' => '', 'required' => '']) !!}--}}
-                                    <input type="text" name="date" id="date" class="form-control date">
-                                    <p class="help-block"></p>
-                                    @if($errors->has('date'))
-                                        <p class="help-block">
-                                            {{ $errors->first('date') }}
-                                        </p>
-                                    @endif
-                                </div>
+                                    <div class="col-sm-7">
+                                        <div class="form-check">
+                                            <input type="text" name="date" id="date" class="form-control date">
+                                            <p class="help-block"></p>
+                                            @if($errors->has('date'))
+                                                <p class="help-block">
+                                                    {{ $errors->first('date') }}
+                                                </p>
+                                            @endif
+                                        </div>
+                                    </div>
                             </div>
+                                <div class="row">
+                                    <label class="col-sm-2 col-form-label">{{ __('All day') }}</label>
+                                    <div class="col-sm-7">
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" value="1" name="all_day">
+                                                <span class="form-check-sign">
+                                                  <span class="check"></span>
+                                              </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
                             <div class="row" id="start_time">
-                                <div class="col-xs-12 form-group">
-                                    {!! Form::label('start_time', 'Start time*', ['class' => 'control-label']) !!}
+                                <label class="col-sm-2 col-form-label">{{ __('Start time') }}</label>
+                                <div class="col-sm-7">
+                                    {{--{!! Form::label('start_time', 'Start time*', ['class' => 'control-label']) !!}--}}
                                     <div class="form-inline">
                                     <select name="starting_hour" id="starting_hour" class="form-control" required style="max-width: 85px;">
                                         <option value="-1" selected>Please select</option>
@@ -56,8 +72,9 @@
                                 </div>
                             </div>
                             <div class="row" id="finish_time">
-                                <div class="col-xs-12 form-group">
-                                    {!! Form::label('finish_time', 'Finish time*', ['class' => 'control-label']) !!}
+                                    <label class="col-sm-2 col-form-label">{{ __('Finish time') }}</label>
+                                    <div class="col-sm-7">
+{{--                                    {!! Form::label('finish_time', 'Finish time*', ['class' => 'control-label']) !!}--}}
                                     <div class="form-inline">
                                     <select name="finish_hour" id="finish_hour" class="form-control" required style="max-width: 85px;">
                                         <option value="-1" selected>Please select</option>
@@ -95,7 +112,7 @@
                             <p class="total_price"><strong>Total price: $<span id="price_total">0</span></strong></p>
                             </div>
                             <div class="row">
-                                <div class="col-xs-12 form-group">
+                                <div class="col-sm-12 form-group">
                                     {!! Form::label('comments', 'Comments', ['class' => 'control-label']) !!}
                                     {!! Form::textarea('comments', old('comments'), ['class' => 'form-control ', 'placeholder' => '']) !!}
                                     <p class="help-block"></p>

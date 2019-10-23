@@ -82,6 +82,8 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::resource('/appointments', 'AppointmentsController');
 
+    Route::resource('/faqs', 'FaqsController');
+
 	Route::get('table-list', function () {
 		return view('pages.table_list');
 	})->name('table');
