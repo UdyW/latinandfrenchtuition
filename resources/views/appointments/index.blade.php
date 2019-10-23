@@ -118,12 +118,22 @@
                 events : [
                         @foreach($appointments as $appointment)
                     {
-                        title : '{{$appointment->comments }}',
-                        start : '{{$appointment->start_datetime }}',
-                        @if ($appointment->finish_datetime)
-                                end: '{{$appointment->finish_datetime }}',
+                        @if($appointment->all_day)
+                            title:  '{{$appointment->comments }}',
+                            allDay: 'true',
+                            start : '{{$appointment->start_datetime }}',
+                            end: '{{$appointment->finish_datetime }}',
+                        @else
+                            @if($appointment->comments == 'busy')
+                                color: '#6e6e6e',
+                            @endif
+                            title : '{{$appointment->comments }}',
+                            start : '{{$appointment->start_datetime }}',
+                            @if ($appointment->finish_datetime)
+                                    end: '{{$appointment->finish_datetime }}',
+                            @endif
+                            url : '{{ route('appointments.edit', $appointment->id) }}'
                         @endif
-                        url : '{{ route('appointments.edit', $appointment->id) }}'
                     },
                     @endforeach
                 ]
