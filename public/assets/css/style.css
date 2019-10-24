@@ -1,5 +1,9 @@
+@font-face {
+    font-family: 'Minion';
+    src :url('../Fonts/MinionVariableConcept-Roman.otf.woff2') format('woff2');
+}
 body{
-	font-family: 'Myriad-Pro','Lato', sans-serif;
+	font-family: 'Minion','Lato', sans-serif;
 }
 
 .btn:focus{
@@ -277,6 +281,9 @@ footer .social-icon a {
 	padding: 25px 15px;
 	box-shadow: 0 0 6px #dcdcdc;
     height: 100%;
+    background: #46535f;
+    color: #fff;
+    font-size: 20px;
 }
 .contact-info .info-box p{
 	margin: 0;
@@ -435,6 +442,7 @@ footer .social-icon a {
     float: left;
     width: 50%;
     padding: 10px;
+    margin: 50px 0px;
 }
 
 .row:after {
