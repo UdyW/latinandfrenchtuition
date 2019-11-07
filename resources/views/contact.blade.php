@@ -54,7 +54,7 @@
                             <span>
                                 <i class="fas fa-phone"></i>
                             </span>
-                        <p><strong>Call us</strong></p>
+                        <p><strong>Call me</strong></p>
                         <p>+123 456 7890</p>
                     </div>
                 </div>
@@ -142,8 +142,9 @@
                 //     endTime: '18:00', // an end time (6pm in this example)
                 // },
                 minTime: '08:00:00',
+                maxTime: '21:00:00',
                 nowIndicator: true,
-                height: 500,
+                height: 410,
                 slotDuration: '01:00:00',
                 allDaySlot: false,
                 eventColor: '#ed7b1d',
