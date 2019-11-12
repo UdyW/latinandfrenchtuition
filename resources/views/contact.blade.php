@@ -5,6 +5,7 @@
         <div class="container">
             <h2 class="pb-4">Availability</h2>
             <div id='calendar'></div>
+            <div class="legend-holder"><div class="legend busy">Busy</div><div class="legend booked">Booked</div><div class="legend available">Available</div></div>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
             <p>Please contact me.</p>
         </div>
