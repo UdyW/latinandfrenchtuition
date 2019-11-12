@@ -5,6 +5,7 @@
         <div class="container">
             <h2 class="pb-4">Availability</h2>
             <div id='calendar'></div>
+            <div class="legend-holder"><div class="legend busy">Busy</div><div class="legend booked">Booked</div><div class="legend available">Available</div></div>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
             <p>Please contact me.</p>
         </div>
@@ -54,7 +55,7 @@
                             <span>
                                 <i class="fas fa-phone"></i>
                             </span>
-                        <p><strong>Call us</strong></p>
+                        <p><strong>Call me</strong></p>
                         <p>+123 456 7890</p>
                     </div>
                 </div>
@@ -142,8 +143,9 @@
                 //     endTime: '18:00', // an end time (6pm in this example)
                 // },
                 minTime: '08:00:00',
+                maxTime: '21:00:00',
                 nowIndicator: true,
-                height: 500,
+                height: 410,
                 slotDuration: '01:00:00',
                 allDaySlot: false,
                 eventColor: '#ed7b1d',

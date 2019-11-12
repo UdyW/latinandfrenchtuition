@@ -6,7 +6,7 @@
             <h2>Welcome!</h2>
                 {!! $welcome_text !!}
             <img  style="margin-top: 17px;" src="assets/images/sinature.jpg">
-            <p style="margin-top: 20px;"><strong>Niovi Gkioka.<br>BA,MA, QTS</strong></p>
+            <p style="margin-top: 20px;"><strong>Niovi Gkioka.<br>BA, MA, QTS</strong></p>
 
         </div>
     </section>
