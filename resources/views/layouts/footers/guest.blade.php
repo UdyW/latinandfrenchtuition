@@ -3,7 +3,7 @@
         <div class="row align-items-center">
             <div class="col-md-5">
                 <a class="footer-logo" href="index.html" style=" display: inline-flex; ">
-                    <span class="text-orange">Latin & French Tuition
+                    <img class="logo img-fluid" src="../assets/images/Crest_NG42.png">
                 </a>
             </div>
             <div class="col-md">

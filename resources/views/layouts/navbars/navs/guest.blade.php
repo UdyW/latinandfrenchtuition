@@ -2,9 +2,9 @@
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand mr-auto" href="./">
-                {{--<img class="logo img-fluid" src="../assets/images/logo.png">--}}
-                <span class="text-orange">Latin &amp; French Tuition
-                </span>
+                <img class="logo img-fluid" src="../assets/images/Crest_NG42.png">
+                {{--<span class="text-orange">Latin &amp; French Tuition--}}
+                {{--</span>--}}
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
