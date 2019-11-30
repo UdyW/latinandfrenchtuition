@@ -54,7 +54,11 @@
                                                     @endif
                                                     <a href="{{ url("/admin/posts/{$post->id}") }}" class="btn btn-xs btn-success">Show</a>
                                                     <a href="{{ url("/admin/posts/{$post->id}/edit") }}" class="btn btn-xs btn-info">Edit</a>
-                                                    <a href="{{ url("/admin/posts/{$post->id}") }}" data-method="DELETE" data-token="{{ csrf_token() }}" data-confirm="Are you sure?" class="btn btn-xs btn-danger">Delete</a>
+                                                    <form action="{{ route('posts.destroy', $post) }}" method="post">
+                                                        @csrf
+                                                        @method('delete')
+                                                        <input type="submit" href="{{ url("/admin/posts/{$post->id}") }}" class="btn btn-xs btn-danger" value="Delete"/>
+                                                    </form>
                                                 </td>
                                             </tr>
                                         @empty

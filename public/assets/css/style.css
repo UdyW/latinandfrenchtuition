@@ -442,7 +442,7 @@ footer .social-icon a {
 .column-card{
     float: left;
     width: 40%;
-    padding: 10px;
+    /*padding: 10px;*/
     margin: 50px 50px;
 }
 
@@ -989,6 +989,9 @@ footer .social-icon a {
     background-color:#ed7b1d;
     color: white;
 }
+.navbar-nav{
+    margin-top: 20px;
+}
 
 @media only screen and (max-width: 1024px) {
 	header span {
@@ -1064,7 +1067,7 @@ footer .social-icon a {
 	    font-size: 16px;
 	}
 	.welcome {
-		padding: 50px 0;
+		padding: 20px 0;
 	}
 	.welcome h2 {
 	    margin-bottom: 30px;
@@ -1084,6 +1087,9 @@ footer .social-icon a {
 	.tutorial {
 	    padding: 50px 0;
 	}
+    .trust-pilot-banner{
+
+    }
 	footer{
 		text-align: center;
 	}
@@ -1121,13 +1127,22 @@ footer .social-icon a {
 		width: 200px;
 	}
 
+    .image1{
+        position: inherit;
+    }
+
     .image2{
-        position: absolute;
-        top: 200px;
-        left: 80%;
-        width: 13%;
+        position: inherit;
+        /*position: absolute;*/
+        /*top: 200px;*/
+        /*left: 80%;*/
+        /*width: 13%;*/
     }
     .columns {
         width: 100%;
+    }
+
+    .column-card {
+        width: auto;
     }
 }
