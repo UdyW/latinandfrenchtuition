@@ -50,10 +50,13 @@
 <section class="banner">
     @if(\App\Banners::where('page',$activePage)->first()->image != '')
     <img class="img-fluid w-100" style="max-height: 100%;max-width:100%;  position: relative; top: 0; left: 0;" src="{{Storage::url(\App\Banners::where('page',$activePage)->first()->image)}}">
-    <a href="https://www.trustpilot.com/review/latinandfrenchtuition.com" target="_blank">
-        <img class="image1" src="assets/images/Trustpilot.png">
-        <img class="image2" src="assets/images/Trustpilot_5star.png">
-    </a>
+
+    <div class="trust-pilot-banner">
+        <a href="https://www.trustpilot.com/review/latinandfrenchtuition.com" target="_blank" class="trustpilot">
+            <img class="image1" src="assets/images/Trustpilot.png">
+            <img class="image2" src="assets/images/Trustpilot_5star.png">
+        </a>
+    </div>
     @endif
     {{--<div>--}}
         {{--<div style="width: 260px; padding: 3px; margin-top: 20px;">--}}
