@@ -56,7 +56,11 @@
             <img class="image1" src="assets/images/Trustpilot.png">
             <img class="image2" src="assets/images/Trustpilot_5star.png">
         </a>
+        {{--<div class="banner-caption">Committed to acadamic excellence.</div>--}}
+        {{--<div class="banner-text">Latin and French tuition for school entrance, GCSE and A-Level exams by a professional tutor and qualified teacher.</div>--}}
+        <img class="banner-caption" src="assets/images/bannerwebsite.png">
     </div>
+
     @endif
     {{--<div>--}}
         {{--<div style="width: 260px; padding: 3px; margin-top: 20px;">--}}
