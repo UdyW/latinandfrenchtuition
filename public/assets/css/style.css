@@ -1020,7 +1020,10 @@ footer .social-icon a {
 	}
 }
 
-
+.video-frame{
+    width: 60%;
+    height: 400px;
+}
 
 @media only screen and (max-width: 991px) {
 	header .navbar .navbar-nav {
@@ -1069,8 +1072,11 @@ footer .social-icon a {
 	    font-size: 17.5px;
 	}
 	header .logo{
-		width: 285px;
+		width: 200px;
 	}
+    .img-fluid{
+        width: 200px;
+    }
 	.orange-bar {
 	    font-size: 16px;
 	}
@@ -1156,5 +1162,10 @@ footer .social-icon a {
 
     .column-card {
         width: auto;
+    }
+
+    .video-frame{
+        width: 100%;
+        height: 100%;
     }
 }

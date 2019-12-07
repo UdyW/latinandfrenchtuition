@@ -6,7 +6,7 @@
             <h2 class="pb-4">Availability</h2>
             <div id='calendar'></div>
             <div class="legend-holder"><div class="legend busy">Busy</div><div class="legend booked">Booked</div><div class="legend available">Available</div></div>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            {{--<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>--}}
             <p>Please contact me.</p>
         </div>
     </div>
@@ -33,7 +33,7 @@
                         <input class="form-control" type="text" name="email" placeholder="Email Address">
                     </div>
                     <div class="col-md-12">
-                        <textarea class="form-control" type="text" name="requirement" placeholder="Tuition Requirement"></textarea>
+                        <textarea class="form-control" type="text" name="requirement" placeholder="Tuition Requirements"></textarea>
                     </div>
                 </div>
                 @error('title')

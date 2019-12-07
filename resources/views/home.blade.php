@@ -53,7 +53,7 @@
         <div class="container">
             <h2>How does online tutoring work?</h2>
             {{--<iframe width="60%" height="450" src="https://www.youtube.com/embed/tgbNymZ7vqY">--}}
-                <iframe width="60%" height="400" src="https://www.youtube.com/embed/uaV_6f6Tjco" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="video-frame" src="https://www.youtube.com/embed/uaV_6f6Tjco" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </iframe>
         </div>
     </section>
