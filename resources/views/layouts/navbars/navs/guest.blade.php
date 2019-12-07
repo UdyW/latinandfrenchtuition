@@ -50,17 +50,17 @@
 <section class="banner">
     @if(\App\Banners::where('page',$activePage)->first()->image != '')
     <img class="img-fluid w-100" style="max-height: 100%;max-width:100%;  position: relative; top: 0; left: 0;" src="{{Storage::url(\App\Banners::where('page',$activePage)->first()->image)}}">
-
-    <div class="trust-pilot-banner">
-        <a href="https://www.trustpilot.com/review/latinandfrenchtuition.com" target="_blank" class="trustpilot">
-            <img class="image1" src="assets/images/Trustpilot.png">
-            <img class="image2" src="assets/images/Trustpilot_5star.png">
-        </a>
-        {{--<div class="banner-caption">Committed to acadamic excellence.</div>--}}
-        {{--<div class="banner-text">Latin and French tuition for school entrance, GCSE and A-Level exams by a professional tutor and qualified teacher.</div>--}}
-        <img class="banner-caption" src="assets/images/bannerwebsite.png">
-    </div>
-
+        @if($activePage != 'services')
+            <div class="trust-pilot-banner">
+                <a href="https://www.trustpilot.com/review/latinandfrenchtuition.com" target="_blank" class="trustpilot">
+                    <img class="image1" src="assets/images/Trustpilot.png">
+                    <img class="image2" src="assets/images/Trustpilot_4halfstar.png">
+                </a>
+                {{--<div class="banner-caption">Committed to acadamic excellence.</div>--}}
+                {{--<div class="banner-text">Latin and French tuition for school entrance, GCSE and A-Level exams by a professional tutor and qualified teacher.</div>--}}
+                <img class="banner-caption" src="assets/images/bannerwebsite.png">
+            </div>
+        @endif
     @endif
     {{--<div>--}}
         {{--<div style="width: 260px; padding: 3px; margin-top: 20px;">--}}

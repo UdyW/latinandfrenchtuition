@@ -8,7 +8,7 @@
             </div>
             <div class="col-md">
                 <h3>Phone:</h3>
-                <p>123-455-6789</p>
+                <p>+44 749 409 0459</p>
             </div>
             <div class="col-md">
                 <h3>Email:</h3>
@@ -25,5 +25,5 @@
 </footer>
 <div class="orange-bar-f">
     <span>Online and London-based</span>
-    <span class="copy">&copy; 2019 Latin & French Tutor. All rights reserved</span>
+    <span class="copy">&copy; 2019 Latin & French Tuition. All rights reserved</span>
 </div>

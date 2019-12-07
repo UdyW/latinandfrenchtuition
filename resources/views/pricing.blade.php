@@ -3,7 +3,7 @@
 @section('content')
     <section class="pricing">
         <div class="container">
-            <h2>Packages</h2>
+            <h2>PRICING</h2>
             <div class="pricing-container">
             @foreach(\App\Pricing::all() as $package)
             <div class="columns">
