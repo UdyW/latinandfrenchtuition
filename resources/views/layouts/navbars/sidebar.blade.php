@@ -190,6 +190,12 @@
                 <p>{{ __('FAQs') }}</p>
             </a>
         </li>
+        <li class="nav-item{{ $activePage == 'reviews' ? ' active' : '' }}">
+            <a class="nav-link" href="{{ route('reviews.index') }}">
+                <i class="material-icons">star</i>
+                <p>{{ __('Reviews') }}</p>
+            </a>
+        </li>
       {{--<li class="nav-item{{ $activePage == 'table' ? ' active' : '' }}">--}}
         {{--<a class="nav-link" href="{{ route('table') }}">--}}
           {{--<i class="material-icons">content_paste</i>--}}
