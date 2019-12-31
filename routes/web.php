@@ -84,6 +84,8 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::resource('/faqs', 'FaqsController');
 
+    Route::resource('/reviews', 'ReviewsController');
+
 	Route::get('table-list', function () {
 		return view('pages.table_list');
 	})->name('table');

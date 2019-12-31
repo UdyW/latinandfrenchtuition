@@ -16,8 +16,8 @@
             </div>
             <div class="col-md">
                 <div class="social-icon">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/Latin-and-French-Tuition-104384311042953" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/and_tuition" target="_blank"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
         </div>
