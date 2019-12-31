@@ -38,15 +38,19 @@
     </section>
     <section class="testimonials">
         <div class="container">
-            <h2>Testimonials</h2>
-            <div class="row">
-            <p>Niovi has been instrumental in my sons progress in French and Latin at common
-                entrance resulting in him being admitted to one of UK's leading independent
-                schools. She has also tutored him Greek. Niovi's commitment, dedication and
+            <h2>Reviews</h2>
 
-                passion is second to non and could not be more highly recommended.</p>
-            </div>
-            <a href="#" class="btn orange">More Testimonials</a>
+                <div class="carousel-class">
+                    @foreach($reviews as $review)
+                        <div>
+                            <h3>{{$review->title}}</h3>
+                            <p>{{$review->review}}</p>
+                            <h4>{{$review->name}}</h4>
+                        </div>
+                    @endforeach
+                </div>
+
+            <a href="https://www.trustpilot.com/review/latinandfrenchtuition.com" target="_blank" class="btn orange">More Reviews</a>
         </div>
     </section>
     <section class="about">
@@ -57,4 +61,11 @@
             </iframe>
         </div>
     </section>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.carousel-class').slick({
+                autoplay: true
+            });
+        });
+    </script>
 @endsection
