@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row align-items-center">
             <div class="col-md-5">
-                <a class="footer-logo" href="index.html" style=" display: inline-flex; ">
+                <a class="footer-logo" href="index.html">
                     <img class="logo img-fluid" src="../assets/images/Crest_NG42.png">
                 </a>
             </div>
