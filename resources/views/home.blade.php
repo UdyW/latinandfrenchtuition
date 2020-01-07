@@ -33,7 +33,7 @@
                     <p>With personalised assignments, assessments and additional materials, I have the tools you need to improve exam technique and maximise success.</p>
                 </div>
             </div>
-            <a href="#" class="btn orange">Learn More</a>
+            <a href="./services" class="btn orange">Learn More</a>
         </div>
     </section>
     <section class="testimonials">
