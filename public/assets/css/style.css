@@ -37,7 +37,7 @@ a:hover{
 
 header{
 	background: #1a2936;
-	padding: 15px 0;
+	/*padding: 15px 0;*/
 }
 header span{
     color: #fff;
@@ -1068,6 +1068,12 @@ footer .social-icon a {
     h3{
         font-size: 15px;
     }
+    header{
+        padding: 0px;
+    }
+    .container-fluid {
+        padding: 0px;
+    }
 	header span {
 	    font-size: 15px;
 	    line-height: 18px;
@@ -1075,15 +1081,18 @@ footer .social-icon a {
 	header span.orange {
 	    font-size: 17.5px;
 	}
+    .navbar{
+        padding: 3px 2px 0px 10px;
+    }
 	header .logo{
-		width: 250px;
+		width: 270px;
         margin-top: -10px;
 	}
     .welcome p {
         font-size: 15px !important;
     }
     .img-fluid{
-        width: 200px;
+        width: 300px;
         height: 100%;
     }
 	.orange-bar {
