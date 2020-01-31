@@ -1,7 +1,6 @@
 @extends('layouts.template', ['class' => '', 'activePage' => 'resources', 'title' => __('Niovi\'s Dashboard')])
 
 @section('content')
-
     <section class="faqs">
         <div class="container">
             <h2 class="text-center pb-5">Resources</h2>
@@ -30,10 +29,26 @@
                                 @foreach(\App\Document::where('subcategory_id',$subcat->id)->get() as $doc)
 
                                         <div class="card-body border-bottom">
-                                            <a href="{{Storage::url($doc->path)}}" target="_blank">
-                                                <h6 class="white-text">{{$doc->name}}</h6>
-                                                {{--<p  class="white-text"><i>{{$doc->description}}</i></p>--}}
-                                            </a>
+                                            {{--<a href="{{Storage::url($doc->path)}}" target="_blank">--}}
+                                            @if($doc->protected)
+                                            <div class="row">
+                                                <div class="col-8">
+                                                        <h6 class="white-text">{{$doc->name}}</h6>
+                                                        {{--<p  class="white-text"><i>{{$doc->description}}</i></p>--}}
+                                                </div>
+
+                                                <div class="col-4">
+                                            <!-- Link to open the modal -->
+                                                    <button type="button" class="btn btn-primary btn-unlock" id="myBtn" data-doc-id="{{$doc->id}}">Unlock</button>
+                                                {{--<p><a href="#unlock-modal" rel="modal:open" data-doc-id="{{$doc->id}}">Open Modal</a></p>--}}
+                                                </div>
+                                            </div>
+                                            @else
+                                                    <a href="/open-document/{{$doc->id}}" target="_blank">
+                                                        <h6 class="white-text">{{$doc->name}}</h6>
+                                                        {{--<p  class="white-text"><i>{{$doc->description}}</i></p>--}}
+                                                    </a>
+                                            @endif
                                         </div>
 
                                 @endforeach
@@ -46,6 +61,41 @@
                 @endforeach
                     </div>
             </div>
+            <!-- Modal HTML embedded directly into document -->
+            <div id="forgot-dialog" style="display:none;" title="Reset your password">
+                {{--<form role="form" action="{{route('unlock')}}" method="post">--}}
+                    {{--@csrf--}}
+                    {{--<div class="form-group">--}}
+                        {{--<input type="hidden" id="docId" name="docId" value=""/>--}}
+                        {{--<input type="text" class="form-control" name="code" placeholder="Unlock code">--}}
+                    {{--</div>--}}
+                    {{--<button type="submit" class="btn orange"><span class="glyphicon glyphicon-off"></span> Unlock</button>--}}
+                {{--</form>--}}
+            </div>
         </div>
     </section>
+    {{--<button id="opener">open the dialog</button>--}}
+    <div id="dialog" title="Unlock Document">
+        <form role="form" action="{{route('unlock')}}" method="post">
+            @csrf
+            {{--<div class="form-group">--}}
+            <input type="hidden" id="docId" name="docId" value=""/>
+            <input type="text" class="form-control" name="code" placeholder="Unlock code">
+            <input type="submit" value="Unlock">
+            {{--</div>--}}
+            {{--<button type="submit" class="btn orange"><span class="glyphicon glyphicon-off"></span> Unlock</button>--}}
+        </form>
+    </div>
+
+    <script>
+        $( "#dialog" ).dialog({ autoOpen: false, dialogClass: 'no-close success-dialog' });
+        $( ".btn-unlock" ).click(function() {
+            $( "#dialog" ).dialog( "open" );
+            console.log('doc id: '+event.target.getAttribute('data-doc-id'));
+            $("#docId").val(event.target.getAttribute('data-doc-id'));
+        });
+        // $(  "#dialog" ).on( "dialogopen", function( event, ui ) {
+        //     alert($("#docId").val());
+        // } );
+    </script>
 @endsection

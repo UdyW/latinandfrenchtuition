@@ -190,6 +190,12 @@
                 <p>{{ __('FAQs') }}</p>
             </a>
         </li>
+        <li class="nav-item{{ $activePage == 'settings' ? ' active' : '' }}">
+            <a class="nav-link" href="{{ route('settings.index') }}">
+                <i class="material-icons">build</i>
+                <p>{{ __('Settings') }}</p>
+            </a>
+        </li>
         <li class="nav-item{{ $activePage == 'reviews' ? ' active' : '' }}">
             <a class="nav-link" href="{{ route('reviews.index') }}">
                 <i class="material-icons">star</i>
