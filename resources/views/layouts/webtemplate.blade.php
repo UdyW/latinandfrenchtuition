@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap">
     <link rel="stylesheet" href="../assets/slick/slick.css">
     <link rel="stylesheet" href="../assets/slick/slick-theme.css">
-
+    <link rel="preload" href="../assets/slick/fonts/slick.woff" type="font/woff" crossorigin>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
