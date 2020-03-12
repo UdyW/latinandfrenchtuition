@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- font -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" as="stylesheet">
 
     <link rel="stylesheet" href="../assets/slick/slick.css">
     <link rel="stylesheet" href="../assets/slick/slick-theme.css">
@@ -16,20 +16,20 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.css"/>
 
-    <script src="{{ asset('material') }}/js/core/jquery.min.js"></script>
-    <script src="{{ asset('material') }}/js/core/popper.min.js"></script>
-    <script src="{{ asset('material') }}/js/core/bootstrap-material-design.min.js"></script>
-    <script src="{{ asset('material') }}/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <script rel="preload" src="{{ asset('material') }}/js/core/jquery.min.js" as="script"></script>
+    <script rel="preload" src="{{ asset('material') }}/js/core/popper.min.js" as="script"></script>
+    <script rel="preload" src="{{ asset('material') }}/js/core/bootstrap-material-design.min.js" as="script"></script>
+    <script rel="preload" src="{{ asset('material') }}/js/plugins/perfect-scrollbar.jquery.min.js" as="script"></script>
 
     {{--<script src="assets/js/jquery.js"></script>--}}
-    <script src="assets/slick/slick.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script rel="preload"  src="assets/slick/slick.js" as="script"></script>
+    <script  rel="preload" src="assets/js/bootstrap.min.js" as="script"></script>
+    <script rel="preload"  src="assets/js/main.js" as="script"></script>
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.js"></script>
-    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <script rel="preload"  src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.js" as="script"></script>
+    <script rel="preload"  src="//code.jquery.com/ui/1.12.1/jquery-ui.js" as="script"></script>
+    <script rel="preload"  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js" as="script"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"  as="script"/>
     <title>Online Tuition</title>
 </head>
 <body class="{{ $class ?? '' }}">
