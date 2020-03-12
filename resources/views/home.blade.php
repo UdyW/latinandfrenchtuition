@@ -57,11 +57,19 @@
         <div class="container">
             <h2>How does online tutoring work?</h2>
             {{--<iframe width="60%" height="450" src="https://www.youtube.com/embed/tgbNymZ7vqY">--}}
-                <iframe class="video-frame" src="https://www.youtube.com/embed/uaV_6f6Tjco" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="video-frame" data-src="https://www.youtube.com/embed/uaV_6f6Tjco" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </iframe>
         </div>
     </section>
     <script type="text/javascript">
+        function init() {
+            var vidDefer = document.getElementsByTagName('iframe');
+            for (var i=0; i<vidDefer.length; i++) {
+                if(vidDefer[i].getAttribute('data-src')) {
+                    vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'));
+                } } }
+        window.onload = init;
+
         $(document).ready(function(){
             $('.carousel-class').slick({
                 autoplay: true

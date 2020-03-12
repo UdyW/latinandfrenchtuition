@@ -18,8 +18,11 @@ h2{
     font-weight: 700;
     text-transform: uppercase;
 }
-p{
-    word-spacing: 2px;
+p, span, ul{
+    word-spacing: 4px;
+}
+h1,h2{
+    word-spacing: 10px;
 }
 a,
 a:hover{
