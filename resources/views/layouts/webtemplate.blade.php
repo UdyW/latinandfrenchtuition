@@ -33,6 +33,18 @@
     <title>Online Tuition</title>
 </head>
 <body class="{{ $class ?? '' }}">
+<script type="text/javascript">
+function parseJSAtOnload() {
+var element = document.createElement("script");
+element.src = "script_to_be_deferred.js";
+document.body.appendChild(element);
+}
+if (window.addEventListener)
+window.addEventListener("load", parseJSAtOnload, false);
+else if (window.attachEvent)
+window.attachEvent("onload", parseJSAtOnload);
+else window.onload = parseJSAtOnload;
+</script >
 @include('layouts.page_templates.frontend')
 
 
