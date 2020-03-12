@@ -28,8 +28,14 @@ Route::get('services', function(){ return view('services');})->name('services');
 
 Route::post('savelead', 'ContactController@save')->name('savelead');
 
+Route::post('unlock', 'DocumentController@unlock')->name('unlock');
+
 Route::get('/blog', 'BlogController@index');
+
+Route::get('/open-document/{id}', 'DocumentController@openDocument');
+
 Route::get('/posts/{post}', 'BlogController@post');
+
 Route::post('/posts/{post}/comment', 'BlogController@comment');
 
 Route::get('calender', 'CalenderController@show');
@@ -85,6 +91,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('/faqs', 'FaqsController');
 
     Route::resource('/reviews', 'ReviewsController');
+
+    Route::resource('/settings', 'SettingsController');
 
 	Route::get('table-list', function () {
 		return view('pages.table_list');

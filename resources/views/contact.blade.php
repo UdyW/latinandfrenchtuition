@@ -56,7 +56,7 @@
                                 <i class="fas fa-phone"></i>
                             </span>
                         <p><strong>Call me</strong></p>
-                        <p>+44 749 409 0459</p>
+                        <p>+44 739 875 7259</p>
                     </div>
                 </div>
                 <div class="col-md-6">
