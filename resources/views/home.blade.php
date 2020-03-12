@@ -1,4 +1,4 @@
-@extends('layouts.template', ['class' => '', 'activePage' => 'home', 'title' => __('Niovi\'s Dashboard')])
+@extends('layouts.webtemplate', ['class' => '', 'activePage' => 'home', 'title' => __('Niovi\'s Dashboard')])
 
 @section('content')
     <section class="welcome">
